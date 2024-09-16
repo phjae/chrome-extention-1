@@ -1,0 +1,83 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #FFF;
+}
+
+#popup-box {
+  width: 300px;
+  padding: 20px;
+  background-color: rgb(15, 15, 15);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #DDD;
+  box-sizing: border-box;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(190deg, #fff0, #ffffff78);
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #4D4E4E;
+}
+
+#phrases-list {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+#phrases-list .phrases-item {
+  padding: 5px;
+  border: 1px solid #DDD;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &>span {
+    max-width: 260px;
+  }
+
+  &>button {
+    all: unset;
+
+    &>svg {
+      width: 12px;
+      height: 12px;
+      fill: #FFF;
+    }
+  }
+}
+
+.phrases-item.selected {
+  background-color: #FFF;
+  color: #000;
+
+  &>button>svg {
+    fill: #000 !important;
+  }
+}
